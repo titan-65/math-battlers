@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="assets/css/material-kit.css?v=2.0.4" rel="stylesheet" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('https://images.unsplash.com/photo-1476966502122-c26b7830def9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1072&q=80');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 md-offset-2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game">
+        <section id="monster" class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Monster Health
+                        </div>
+                        <div class="card-body">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" :style="{width: `${healthBarMonsters}%` }" aria-valuenow=" 15 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                <div class="progress-bar bg-success " role="progressbar " style="width: 100% " aria-valuenow="30 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                <div class="progress-bar bg-info " role="progressbar " style="width: 100% " aria-valuenow="20 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="player" class=" card ">
+                        <div class="card-header ">Player Health
+                        </div>
+                        <div class="card-body ">
+                            <div class="progress ">
+                                <div class="progress-bar progress-bar-striped bg-danger " role="progressbar " :style="{width: `${healthBarPlayer}%`} " aria-valuenow="100 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section id="controls ">
+            <button @click="attack ">ATTACK</button>
+            <button>COMBINED ATTACK</button>
+            <button>ADD</button>
+            <button>SUBTRACT</button>
+            <button>MULTIPLY</button>
+            <button>DIVIDE</button>
+        </section>
+        <section id="log " class="container ">
+            <h2>Math Quest</h2>
+            <ul></ul>
+        </section>
+    </div>
+    <footer class="footer footer-default ">
+        <div class="container ">
+            <nav class="float-left ">
+                <ul>
+                    <li>
+                        <a href="https://www.creative-tim.com/ ">
+                  Creative Tim
+              </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright float-right ">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, made with <i class="material-icons ">favorite</i> by
+                <a href="https://www.creative-tim.com/ " target="blank ">Creative Tim</a> for a better web.
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js " integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/ " crossorigin="anonymous "></script>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js " type="text/javascript "></script>
+    <script src="assets/js/core/popper.min.js " type="text/javascript "></script>
+    <script src="assets/js/core/bootstrap-material-design.min.js " type="text/javascript "></script>
+    <script src="assets/js/plugins/moment.min.js "></script>
+    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="assets/js/plugins/bootstrap-datetimepicker.js " type="text/javascript "></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="assets/js/plugins/nouislider.min.js " type="text/javascript "></script>
+    <!--  Google Maps Plugin  -->
+    <script type="text/javascript " src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE "></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js "></script>
+    <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+    <script src="assets/js/material-kit.js?v=2.0.4 " type="text/javascript "></script>
+</body>
+
+</html>
