@@ -26,12 +26,19 @@ const app = Vue.createApp({
     methods: {
         attack() {
             const attack = Math.floor(Math.random() * (12 - 5)) + 5
+            console.log(attack)
             this.healthBarMonsters -= attack
             this.monsterAttack()
+            if (attack === 10) {
+
+            }
         },
         monsterAttack() {
             const attack = Math.floor(Math.random() * (15 - 1)) + 5
             this.healthBarPlayer -= attack
+        },
+        combinedAttack() {
+
         },
         add(attack) {
             if (attack > 10) {
@@ -40,13 +47,17 @@ const app = Vue.createApp({
             }
         },
         subtract() {
-
+            if (attack === 10) {
+                this.healthBarMonsters - 15
+            }
+            this.monsterAttack()
+            this.monsterAttack()
         },
         multiply() {
-
+            alert('COMING SOON')
         },
         divide() {
-
+            alert('COMING SOON')
         }
     }
 })
